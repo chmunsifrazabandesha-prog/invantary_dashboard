@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production & Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="brand">PRO-DASH v2.0</div>
+            <nav id="main-nav">
+                <button class="nav-btn active" data-tab="Packing">Packing</button>
+                <button class="nav-btn" data-tab="Shop Stoke">Shop Stoke</button>
+                <button class="nav-btn" data-tab="Embroidery">Embroidery</button>
+                <button class="nav-btn" data-tab="Reports">Reports</button>
+                <button class="nav-btn" data-tab="Crinkle">Crinkle</button>
+                <button class="nav-btn" data-tab="Fabric">Fabric Detail</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="title-section">
+                    <h1 id="view-title">Packing</h1>
+                    <p id="view-date-label">Viewing records for today</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Daily Total Quantity</span>
+                        <span class="stat-value" id="daily-qty">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Active Batches</span>
+                        <span class="stat-value" id="active-count">0</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="controls">
+                <div class="filter-group">
+                    <label>Filter by Date:</label>
+                    <input type="date" id="global-date-filter">
+                </div>
+                <button class="btn-add" onclick="addNewRow()">+ Add New Record</button>
+            </section>
+
+            <div class="table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr id="table-head">
+                            </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

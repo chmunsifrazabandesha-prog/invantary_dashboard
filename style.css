@@ -1,0 +1,39 @@
+:root {
+    --bg-dark: #0f172a;
+    --sidebar-btn: #1e293b;
+    --accent: #3b82f6;
+    --success: #10b981;
+    --danger: #ef4444;
+}
+
+body { font-family: 'Inter', sans-serif; margin: 0; background: #f1f5f9; color: #1e293b; }
+.dashboard-wrapper { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar { width: 260px; background: var(--bg-dark); color: white; padding: 20px; display: flex; flex-direction: column; }
+.brand { font-size: 1.5rem; font-weight: 700; margin-bottom: 40px; color: var(--accent); letter-spacing: -1px; }
+.nav-btn { 
+    background: transparent; border: none; color: #94a3b8; padding: 14px; 
+    text-align: left; font-size: 1rem; cursor: pointer; border-radius: 8px; margin-bottom: 5px;
+}
+.nav-btn.active { background: var(--accent); color: white; font-weight: 600; }
+.nav-btn:hover:not(.active) { background: var(--sidebar-btn); color: white; }
+
+/* Main Content */
+.main-content { flex: 1; padding: 30px; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+.stats-grid { display: flex; gap: 20px; }
+.stat-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); min-width: 180px; }
+.stat-label { display: block; font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; }
+.stat-value { font-size: 1.8rem; font-weight: 700; color: var(--bg-dark); }
+
+/* Table Section */
+.table-container { background: white; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #f8fafc; padding: 15px; text-align: left; border-bottom: 2px solid #e2e8f0; font-size: 0.85rem; color: #475569; }
+td { padding: 12px 15px; border-bottom: 1px solid #f1f5f9; }
+
+input { border: 1px solid #cbd5e1; padding: 8px; border-radius: 6px; width: 100%; box-sizing: border-box; }
+.btn-add { background: var(--accent); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.btn-save { background: var(--success); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-right: 5px; }
+.btn-del { background: var(--danger); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
